@@ -70,13 +70,13 @@ for elem in B:
             wr.write(line)
     except IndexError:
         print(elem)
-        print("brutto")
+        print("→ You might have forgot a \"→\"")
         pass
 
 
 
 
-
+ 
 
 wr.close()
 fh.close()
