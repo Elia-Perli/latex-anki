@@ -1,21 +1,21 @@
-#LATEX-ANKI
+# LATEX-ANKI
 A simple script to enable using a normal tex editor to typeset you anki questions.
 
-###usage
-#####summary:
+### usage
+##### summary:
 
-######preparing everything
+###### preparing everything
 0. Copy the file `parser_latex→anki.py` in a folder, let's say it has absolute path `FOLDR` 
 1. Create special  `note type`  in Anki
 2. Allow new import on Anki
 3. Add a bash script to your bin folder
-######actually convert into cards
+###### actually convert into cards
 4. type the latex document
 5. run the command
 6. import the .txt file
 
 
-#####Non-summary
+##### Non-summary
 
 1. You should create on you anki a `note type` two new types:
   
@@ -41,7 +41,6 @@ Nonetheless it's easier if you create a bash command like the one called `latex�
 
 	\end{itemize}
  ```
-
 You can put anything you want in the preamble of the document. The important is that you have only one "itemize" in all the file. Remember to add the new commands to anki as well.
 Also, as you can see each question is defined by the format "tabtab \item {number} → QUESTION→ANSWER" . You can change in the code, pehearps the "→" might not be suitable for you (But on Ubunutu it's easy to type since you just have to press `AltGr+i`)
 5. Assuming you are in a directory X, assuming in this directory there is a file called "dmd_DECK1.tex", to get the ankified version you just have to run `anki→latex dmd_DECK1.tex` . This should generate the file "dmd_DECK1_to_be_imported.txt", that you can import to anki
