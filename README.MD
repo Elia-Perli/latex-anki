@@ -1,5 +1,5 @@
 # LATEX-ANKI
-A simple script to enable using a normal tex editor to typeset you anki questions.
+A simple script to enable you to use a normal tex editor to typeset your anki questions.
 
 ### usage
 ##### summary:
@@ -43,6 +43,7 @@ Nonetheless it's easier if you create a bash command like the one called `latex�
  ```
 You can put anything you want in the preamble of the document. The important is that you have only one "itemize" in all the file. Remember to add the new commands to anki as well.
 Also, as you can see each question is defined by the format "tabtab \item {number} → QUESTION→ANSWER" . You can change in the code, pehearps the "→" might not be suitable for you (But on Ubunutu it's easy to type since you just have to press `AltGr+i`)
+
 5. Assuming you are in a directory X, assuming in this directory there is a file called "dmd_DECK1.tex", to get the ankified version you just have to run `anki→latex dmd_DECK1.tex` . This should generate the file "dmd_DECK1_to_be_imported.txt", that you can import to anki
 
 
