@@ -1,0 +1,220 @@
+\documentclass[A4,12pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[italian]{babel}
+\usepackage{fancyhdr}
+\usepackage[top=3cm, bottom=4cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{scalerel}
+\usepackage{multicol}
+\usepackage[thinc]{esdiff}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{dsfont}
+
+
+
+\newcommand{\ti}[1]{{\sc \textcolor{teal}{\underline{#1}:}}}
+
+\newcommand{\df}{\ti{Def}\ }
+\newcommand{\os}{\ti{Oss}\ }
+\newcommand{\pr}{\ti{Prop}\ }
+\newcommand{\tr}{ {\large \ti{th}}\ }
+\newcommand{\cor}{\ti{Cor}\ }
+\newcommand{\ntz}{\ti{Not}\ }
+\newcommand{\es}{\ti{Es}\ }
+\newcommand{\lm}{\ti{Lemma}\ }
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Cdiff}{\C\textit{-diff}}
+\newcommand{\Hc}{\mathscr{H}}
+\newcommand{\va}[1]{\lvert #1 \rvert}
+\newcommand{\nr}[1]{\lVert #1 \rVert}
+\newcommand{\grgen}[1]{< \hspace{-1mm} #1 \hspace{-1mm} >}
+\newcommand{\ZnZ}{\Z/n\Z}
+
+\renewcommand{\subset}{\subseteq}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\erre}{\mathbb{R}}
+\newcommand{\errex}{\erre \cup \{\pm \infty\}}
+\newcommand{\ci}{\mathbb{C}}
+\newcommand{\erren}{\mathbb{R}^N}
+\newcommand{\zetabb}{\mathbb{Z}}
+\newcommand{\enne}{\mathbb{N}}
+\newcommand{\spmis}{(\Omega,\mathcal{M})}
+\newcommand{\spdimis}{(\Omega,\mathcal{M},\mu)}
+\newcommand{\compl}[1]{\mathcal{C}_{#1}}
+\newcommand{\sigal}{\mathcal{M}}
+\newcommand{\parti}[1]{\mathcal{P}(#1)}
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\Bigcap}{\bigcap\limits}
+\newcommand{\Sup}{\sup\limits}
+\newcommand{\Max}{\max\limits}
+\newcommand{\Min}{\min\limits}
+\newcommand{\Inf}{\inf\limits}
+\newcommand{\Limsup}{\limsup\limits}
+\newcommand{\Liminf}{\liminf\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Int}{\displaystyle\int}
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\mustar}{\mu^\ast}
+\newcommand{\indic}{\mathds{1}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\acts}{\curvearrowright}
+\newcommand{\notimplies}{\;\not\!\!\!\implies}
+\newcommand{\dpartial}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\then}{\Rightarrow}
+\newcommand\restr[2]{#1_{|_{#2}}}
+
+\newcommand{\cmp}[1]{(#1_1,...,#1_n)}
+\newcommand{\B}{\mathcal{B}}
+\usepackage{csquotes}
+%for i = 1:100 println("                \\item $i→ ") end
+
+\newcommand{\Ginsmth}{  G\!\mathbf{-insiemi}}
+\newcommand{\Gins}{$ G $-ins.}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\psy}{$ p $-sylow }
+\begin{document}
+	
+	\begin{itemize}[noitemsep]
+		\item 1→ Qual è la definizione di azione sinistra? → Dato un gruppo $ G $ e un insieme $ X $ definisco \textsc{azione di $X$ su $ G $ } un'applicazione $ A:G\times X\to X $ che soddisfa: \begin{enumerate}[noitemsep]
+			\item $ A(e,x) = x\ \forall x \in X $
+			\item $ A(g,A(h,x)) = A(gh,x)\ \forall g,h\in G,\ \forall x\in X$
+		\end{enumerate} 
+		Dico che $ G $ \textsc{agisce su} $ X $, $ G\acts X$
+		\item 3→  Fornisci un esempio di azione su uno spazio vettoriale $V$ → È sufficiente prendere $A:G\times V\to V: (f,v)\mapsto f(v)$
+		\item 3.01→  Illustra come $S_X$ agisce su $X$ → L'azione è $ g\cdot x := g(x) $ 
+		\item 4→ Enuncia il lemma di caratterizzazione delle azioni di gruppo come morfismi nel gruppo simmetrico → Data un'azione $ A:G\times X \to X:(g,x)\mapsto g\cdot x $, posso definire un morfismo $ \alpha: G\to S_X $ ponendo $ \alpha(g) $ la funzione $X\to X: x\mapsto A(g,x) $. (Cioè quindi $ \alpha(g)(x):=A(g,x) $) (da dimostrare che $ \alpha $è ben definita).\\ Viceversa, dato $ \alpha:G\to S_X $ morfismo, posso definire un'azione $ A $ come segue: $ A(g,x) := \alpha(g)(x) $ (da dimostrare che è un'azione)
+		\item 5→  Qual è la definizione di insieme $G$-invariante? →  Se $G\acts X$, un sottoinsieme $Y\subseteq X$ è \textsc{invariante} quando $g\cdot y = y\ \forall y \in Y $ 
+		\item 6→ Quali invarianti puoi trovare per $ \operatorname{SO}(3)\acts \R^3 $? → Le sfere sono $ G $-invarianti 
+		\item 7→ Come si comportano i sottogruppi di un gruppo che agisce su un insieme? → Agiscono anche loro sullo stesso inseme con la restrizione dell'azione
+		\item 8→ Qual è la definizione di $ G $\textsc{-orbita} di $ x\in X $ ? → È $ Gx = \{g\cdot x \forall g \in G\} $
+		\item 9→ La collezione delle orbite di un'azione come si rapporta all'insieme su cui agisce l'azione? → Data $ G\acts X $, le sue orbite formano una partizione di $ X $ 
+		\item 10→ Essere in nella sessa orbita è {{c1:: una relazione d'equivalenza}} → clz 
+		\item 11→ Qual è la definizione di $ X/G $ ? → $ X/G:= X/\sim $, con $ \sim $ relazione di equivalenza su $ X $ di appartenenza alla stessa orbita.
+		\item 12→ Qual è la definizione di \textsc{stabilizzatore} di $ x\in X $? → È $ G_x :=\{g\in G\mid g\cdot x = x\}$ 
+		\item 13→ Come sono in relazione gli stabilizzatori di due elementi sulla stessa orbita? → Se $ x$ e $ y $ sono sulla stessa orbita, allora $ G_x $ e $ G_y $ sono coniugati.
+		\item 14→ Qual è la definizione di azione transitiva? → $ G\acts X $ è \textsc{transitiva} quando $ \forall x,y\in X\ \exists g\in G:\ g\cdot x = y$ (cioè ho un'unica orbita, $ Gx = X $)
+		\item 15→ $ SO(3)\acts S^2 $ è {{c1::transitiva }} → clz
+		\item 16→ Qual è la definizione di spazio omogeneo? → Data $ G\acts X $ azione, se è transitiva dico che $ X $ è uno \textsc{spazio omogeneo} per $ G $ 
+		\item 17→ Esibisci un'azione di un gruppo sul quoziente per un sottogruppo → In generale: se $ H\leq G, X:= G/H $ ho che $ G\acts G/H:\ g\cdot aH:= gaH $
+		\item 18→ Qual è la definizione di un $ G $-\textsc{insieme}? → è un insieme $ X $ su cui agisce $ G $
+		\item 19→ $ G/H $ è sempre {{c1:: omogeneo }} → clz
+		\item 20→ Chi è lo stabilizzatore di un $ x\in G/H $? → È in generale un coniugato di $ H $
+		\item 21→ Qual è la definizione di funzione equivariante? → È una $ f:X\to Y  $ due $ G $-insiemi t.c. $ f(g\cdot x) =g \cdot f(x) $
+		\item 22→ Quando due insiemi sono \textsc{isomorfi} come $ G $-insiemi? → Quando esiste una funzione biunivoca ed equivariante tra loro
+		\item 23→ Enuncia il lemma di caratterizzazione degli spazi omogenei → $ G\acts X $ transitiva, preso $ x_0\in X $ e posto $ H :=G_{x_0} $ allora $ X\cong G/H $ come $ G $-insieme 
+		\item 24→ La classe dei $ G $-insiemi è una → Categoria, $\Ginsmth$ con\\ $\operatorname{Obj}(\Gins)=\{X\text{ insiemi con una fissata } G \text{-azione}\}$ e \\$ \forall  X,Y $ \Gins :  $ \operatorname{Mor}(X,Y) = \{f:X\to Y \text{ equivarianti}\} $
+		\item 25→ Enuncia che relazione collega lo stabilizzatore di un elemento con la sua orbita → $ Gx \cong G/G_x $ come \Gins
+		\item 26→ Qual è la definizione di punto fisso di un'azione? → se $G\acts X  $, un \textsc{punto fisso }dell'azione è un $ x\in X $ t.c $ g\cdot x = x \forall g\in G $
+		\item 27→ $ x $ è un punto fisso $ \Leftrightarrow $ {{c1::$ G_x = G $ }}  → clz
+		\item 28→ Qual è la definizione di azione fedele? → Posto $ \alpha:G \to S_X  $ il morfismo associato a $ G\acts X $, dico che l'azione è \textsc{fedele} quando $ \alpha $ è iniettivo
+		\item 29→ Data un'azione $ \alpha :G\to S_X $ generica, costruisci un'azione fedele. → Dato che $ \alpha $ è un morfismo, $ \exists! \beta : G/\operatorname{Ker}(\alpha) \to S_X$ iniettivo, che induce quindi un'azione fedele.
+		\item 30→ Enuncia una caratterizzazione di azione fedele → $ G\acts X $ è fedele $ \iff \forall g\in G\setminus{e}\ \exists x\in X : g\cdot x \neq x$
+		\item 31→ È $ GL(V)\acts \mathbb{P}(V) $ effettiva? → No perché $ f := x\to\lambda x $ è t.c. $ f\neq id_V $ e $ \alpha(f) = id_V $
+		\item 32→ Se $ G\acts X $ qual è la definizione di punto io di un $ g\in G $? → $ G\acts X $, dico che $ x\in X $ è \textsc{punto fisso} di $ g\in G $ quando $ g\cdot x = x $.
+		\item 33→ Qual è la definizione di azione libera? → $ G\acts X $ è \textsc{libera} quando $ \forall g\in G, g\neq e$ vale che  $ g$ non ha punti fissi 
+		\item 34→ Enuncia una caratterizzazione di azione fedele → $ G\acts X $ è \textsc{libera} $ \iff\ \forall g\in G\setminus{e}, \forall x\in X: g\cdot x \neq x $ 
+		\item 35→ Qual è la definizione di sistema di rappresentanti? → $ X $ insieme, $ \sim  $ relazione di equivalenza su $ X $, dico \textsc{sistema di rappresentanti} un insieme $ S\subseteq X $ t.c. $ \pi_{|_{S}}:S\to X/\sim $ (proiezione canonica) è biettiva.
+		\item 36→ Enuncia l'equazione delle orbite → $ X,G $ finiti, $ G\acts X $, sia $ S={x_1,...,x_k} $ un sistema di rappresentanti per la relazione \enquote*{essere nella stessa orbita}, allora $ \#X = \sum_{i=1}^k \#G/\#G_{x_i} $
+		\item 37→ Enuncia cosa è l'azione per traslazione → È l'azione $ G\acts G:\ g\cdot x:= gx $
+		\item 38→ Enuncia qual è l'azione per moltiplicazione a destra. → 	È l'azione $ G\acts G: g\cdot x := xg^{-1} $
+		\item 39→ Qual è la definizione di azione destra? → È una funzione $ X\times G\to X: (x,g)\mapsto x\cdot g $ che verifica $ x\cdot  e = x;\ \ (x\cdot g_1)\cdot g_2 = x\cdot (g_1g_2) $
+		\item 40→ Come posso passare da un'azione destra ad un'azione sinistra (o viceversa?) → Se $ B:X\times G\to X $ è un'azione destra, allora $ A:G\times X\to X: A(g,x):=B(x,g^{-1}) $ è un'azione sinistra
+		\item 41→ Enuncia qual è l'azione di $ G\acts G $ per coniugio → È l'azione $ G\acts G:\ g\cdot x := gxg^{-1} $
+		\item 42→ Qual è la definizione di automorfismo interno? → È un morfismo della forma: dato $ \operatorname{inn}_g:G\to G:x\mapsto gxg^{-1} $ per un certo $ g\in G $
+		\item 43→ Qual è il morfismo associato all'azione $ G\acts G $ per coniugio? → È $ \alpha:G\to S_G:\alpha(g) = \operatorname{inn_g} $
+		\item 44→ È l'azione per coniugio $ G\acts G $ libera? → No: $ \operatorname{inn}_g(e) = e \forall g $, $ e $ è un punto fisso dell'azione
+		\item 45→ Qual è la definizione di $ X^G $ se $ G\acts X $? → $ X^G := \operatorname{Fix}_G(X):=\{x\in X\mid \forall g: g\cdot x=x\}$
+		\item 46→ Se $ G\acts G $ per coniugio, chi è $ \operatorname{Fix}_G(G) $? → $ \operatorname{Fix}_G(G) = Z(G) $ il centro di $ G $ 
+		\item 47→ Se $ G\acts G $ per coniugio, chi è $ G_x $? →  $ G_x = Z_G(x) $ il centralizzante di $ x $
+		\item 48→ Enuncia l'\textsc{equazione delle classi} → È $ |G| = |Z(G)|+\sum_{i=1}^m [G:Z_G(x_i)] $ se $ x_1,...,x_k  $ è un sistema di rappresentanti della relazione delle orbite, con $ x_1,...,x_m \not \in Z(G)$
+		\item 49→ Qual è la definizione di $ p $-gruppo? → È un gruppo $ G $ con $ o(G)=p^\alpha$, $ p $ primo e $ \alpha \in \N^{>0} $ 
+		\item 50→ Com'è il centralizzante di un $ p $ gruppo? → È banale, $ Z(G) =\{1\} $
+		\item 51→ Puoi estendere un'azione su un insieme al suo insieme delle parti? → Sì, è facile vedere che se $ G\acts X $, allora si ha anche che $ G\acts \mathcal{P}(X):\ g\cdot E := \{g\cdot x\mid x\in E\}(=\alpha(g)(E)) $ 
+		\item 52→ Come puoi far agire un gruppo $ G $ sull'insieme dei suoi sottogruppi? → Sapendo che $ G\acts \mathcal{P}(G) $ per coniugio, ho che $ \mathcal{S}(G):=\{\text{sottogruppi di} G\}$ è un insieme invariante. Allora posso restringere l'azione sopra $ g\cdot H := gHg^{-1} $
+		\item 53→ Presa l'azione $ G\acts S(G) $ per coniugio, e $ H\in S(G) $, chi è $ G_H $? → È il \textsc{normalizzante} di $ H$ in $ G $  
+		\item 54→ Presa l'azione $ G\acts S(G) $ per coniugio dai una caratterizzazione dell'orbita di $ H<G $ → $ GH=\{\text{coniugati di }H\} $, $ |GH| = |G|/|G_H|=\#\textsc{coniugati di }H= |G|/N_G(H) $
+		\item 55→ che relazione c'è tra un sottogruppo $ H<G $ e il suo normalizzante? → $ H\lhd N_G(H) $ e $ H\lhd G \iff N_G(H) = G $
+		\item 56→ Come puoi descrivere euristicamente il normalizzante di un sottogruppo $ H< G $ ? → È il \enquote*{più grande sottogruppo di $ G $ in cui $ H $ è normale }, cioè se $ H'<G,\ H\subseteq H', H\lhd H' \then H'\subseteq N_G(H)$
+		\item 57→ Che rapporto c'è tra il centro di un elemento $ x\in G $ ed il normalizzante del suo gruppo generato? → Vale in generale $ Z_G(x)\subseteq N_G(<x>) $, non vale in generale l'uguaglianza
+		\item 58→ Enuncia il teorema di Cayley nel contesto delle azioni → Ogni gruppo ha un'azione fedele su un qualche insieme
+		\item 59→ Esibisci un Gruppo che non possiede sottogruppi di un determinato ordine che divide l'ordine del gruppo → $ G=A_4 $ nonn possiede sottogruppi di ordine $ 6 $
+		\item 60→ Qual è l'ordine di un generico elemento di un gruppo ciclico? → Se $ G= <g>,\ o(G) =  n$, allora $ o(g^s) = \frac{n}{(n,s)} $ 
+		\item 61→ Quanti generatori ha un gruppo ciclico $ G=<g>\ o(G) = n $? → Sono tanti quanto i naturali $ \leq n $ che non dividono $ n $, cioè $ \varphi(n) $
+		\item 62→ Caratterizza i sottogruppi di ordine $ d|n $ di un gruppo ciclico $ G $ → Sono gli $ H<G $ t.c. $ H=<g^{n/d}> $, questo esiste ed unico $ \iff d|n$ 
+		\item 63→ Enuncia la \textsc{formula di Gauß} → $ \sum\limits_{d:d|n} \varphi(d) = n $
+		\item 64→ Dai una condizione sui sottogruppi di un gruppo $ G $ sufficiente affinché esso sia ciclico → $ G $ gruppo, $ o(G) = n  $, se $ \forall d|n $ esiste al più un sottogruppo di ordine $ d $, allora $ G $ è ciclico 
+		\item 65→ Dai la definizione di $G^d$ e una condizione su di ess affinché il gruppo $G$ sia ciclico → $G^d = \{ x\in G\mid x^d = 1\}$. Se $\forall d \mid n:\ |G^d|\leq d \then\ G$ è ciclico. 
+		\item 66→ Dai delle condizioni sufficienti per trovare dei sottogruppi di un gruppo abeliano → $ G $ gruppo \emph{abeliano}, $o(G) = n,\ d|n\then\ \exists H\leq G:\ o(H)=d$
+		\item 67→ Cosa puoi dire dei sottogruppi di gruppi ciclici e abeliani? → \begin{enumerate}
+			\item $ G $ abeliano $ \then\ \forall d|n\ \exists  $ un sottogruppo di $ G  $ di ordine $ n $ 
+			\item $ G $ ciclico $ \then\ \forall d|n\ \exists  $ un sottogruppo di $ G  $ di ordine $ n $ 
+		\end{enumerate}
+		\item 68→ Enuncia il teorema di Sylow→ Dato un gruppo finito $ G $, posto $ o(G) = p^\alpha m$, $ p $ primo, $ p\nmid  m$, allora \begin{enumerate}
+			\item $ \exists $ un $ p $-sylow in $ G $
+			\item se $ H\leq G $ è un $ p $-sottogruppo $ \then\ H $ è contenuto in un $ p $-sylow
+			\item tutti i $ p $-sylow sono coniugati
+			\item Detto $ n_p=\#\{p-\text{sylow}\}\ \then\ n_p = [G:N_G(P)]$, con $ P $ un $ p $-sylow.
+			\item $ n_p \equiv 1 \ \operatorname{mod} p\ $ e $ n_p\mid n $
+		\end{enumerate}
+		\item 69→ Enuncia il lemma che ti permette di trovare dei $ p $-sylow di un sottogruppo → $ G $ gruppo finito, $ H $ sottogruppo e $ P p$-sylow $ \then\ \exists x\in G:\ xPx^{-1}\cap H  $ è un $ p $-sylow di $ H $ 
+		\item 70→ Dati $ P,H<G $, come può agire $ P\times H  $ su $ G $ ? Di' chi è lo stabilizzatore di un elemento→ $ P\times H \acts G:\ (a,h)\cdot x = axh^-1 $, e inoltre $ (P\times H)_x \cong (x^{-1}Px)\cap H$ tramite $ f $: $ f(a,h) = h $ e $ f^{-1}(h)=(x^{-1}Px,h) $
+		\item 71→ Enunciai il corollario del lemma sui $ p $-sylow dei sottogruppi → $ H\leq G $, $ G $ ha un $ p $-sylow $ \then\  $ anche $ H $ ha un $ p $-sylow
+		\item 72→ Dai un'idea di quale sia la strategia per dimostrare il teorema di Sylow → Eseguo due passi: \begin{enumerate}
+			\item trovo una classe di gruppi con un \psy banale, cioè $ GL(n,{F}_p) $, $ p $ primo e $ F_p=\Z/p $
+			\item esibisco un morfismo iniettivo in $GL(n,{F}_p) $ per un qualsiasi gruppo finito
+		\end{enumerate}
+		\item 73→ Qual è la cardinalità di $ GL(n,F_p) $ con $ p  $ primo e $ F_p=\Z/p $? → È $ \prod_{i = 0}^{n-1}(p^n-p^i) $
+		\item 74→ Enuncia una caratterizzazione dei gruppi di ordine un quadrato di un primo → $ G $ gruppo, $ Z(G)\neq \{1\},\ \# G = p^2,\ p$ primo $ \then G\cong C_{p^2} $ oppure $ G\cong C_p\times C_p $
+		\item 75→ Enuncia una condizione sufficiente su un gruppo affinché esso sia abeliano che va a guardare $ G/Z(G) $ → $ G $ finit. $ G/Z(G) $ ciclico $ \then\ G $ abeliano
+		\item 76→ Esibisci il morfismo iniettivo da $ S_n\hookrightarrow GL(n,F_p) $ → È il morfismo che manda $ \sigma \mapsto \varphi(\sigma):= (e_{\sigma(1)}|...|e_{\sigma(n)}) $ cioè che manda un morfismo nella matrice identità con le colonne permutate.
+		\item 77→ Descrivi il funtore dalla categoria degli insiemi alla categoria degli spazi vettoriali su un campo fissato → È una mappa della forma $ \mathbf{Set}\overset{\alpha}{\to} \mathbf{Vec}(F): \operatorname{Mor}_{\mathbf{Set}}(X,Y) = \{f:X\to Y\}\overset{\alpha}{\to}\{f^*:F^Y\to F^X\} = \operatorname{Mor}_{\mathbf{Set}}(\alpha(X),\alpha(Y)):f\mapsto f^* $, con $ f^*:F^Y\to F^X: u\mapsto u\circ f $ È un funtore controvariante
+		\item 78→ Descrivi il processo di linearizzazione di un'azione → ???
+		\item 79→ Qual è la definizione di $ F $-\textsc{algebra} ? → È un anello $ A $ che è anche un $ F $-spazio vettoriale, con la stessa struttura additiva e t.c. $ \forall a,b \in A\forall \lambda \in F:\ \lambda(ab) = a(\lambda b) = (\lambda a )b $
+		\item 80→ Esibisci una $ F $-algebra facile → Dati $ X $ insieme e $ F $ campo, $ F^X $ è un'$ F $-algebra commutativa con unità $ 1:X\to F:x\mapsto 1\in F $
+		\item 81→ Dato un $ p$-gruppo, esibisci dei suoi sottogruppi → $ \# G = p^\alpha,\ p $ primo $ \then\ \forall i = 0,...,\alpha\ \exists H<G:\ \# H = p^i $
+		\item 82→ Enuncia il lemma che caratterizza il prodotto$ NH $ di due sottogruppi $ N,H<G $, data la funzione $ f:N\times H\to G,\ f(n,h):= nh $ → \begin{enumerate}[noitemsep]
+			\item $\operatorname{Im}(f) = NH  $
+			\item $ nh\in \operatorname{Im}(f) $ e $ f^{-1}(nh)=\{(nx,x^{-1}h)\mid x\in N\cap H \} $
+			\item $ |NH| = |N||H|/|N\cap H| $
+			\item $ N\lhd G\then\ NH<G $
+			\item $ N,H\lhd G\then\ NH\lhd G $
+			\item Se $ N,H\lhd G\then\ [N,H]\subseteq N\cap H $
+			\item Se $ H,N\lhd G, N\cap H = \{1\}\ \then\ NG\cong N\times H $
+		\end{enumerate}
+		\item 83→ Enuncia la proposizione sull'equivalenza tra il prodotto diretto interno ed esterno → $ H,G\lhd G, N\cap H = \{1\}, NH = G\then\ N\cong N\times H $.\\ D'altro lato, se pongo $ N\times H=: K  $ ho: $ \bar N := N\times \{1\} \lhd K,\ \bar H :=\{1\}\times H\lhd K $ sono tali che $ \bar N \cap \bar H = \{(1,1)\} e K=\bar N \bar H $
+		\item 84→ Enuncia il lemma di caratterizzazione del prodotto di un numero finito arbitrario di gruppi → $ G $ gruppo, $ N_1,...,N_k\lhd G $ tali che $ N_i \cap (N_1\cdot ... \cdot \hat N_i \cdot ... \cdot N_k)  = \{1\}\ \then\ f:N_i\times ...\times N_k \to N_1 \cdot ... \cdot N_k : (n_1, ..., n_k)\to n_1\cdot ...\cdot n_k  $ è un isomorfismo
+		\item 85→ Enuncia il teorema di Cauchy per gruppi → $ G $ gruppo finito, $  p $ primo t.c. $ p| o(G)\then\ G $ contiene un elemento di ordine $ p $ 
+		\item 86→ Enuncia il teorema di caratterizzazione dei gruppi con \psy unici → $ G  $ gruppo finito, $ o(G)= p_1^{\alpha_1}...p_k^{\alpha_k},$  $\ p_i $ primi, se tutti i \psy sono unici $ \then\ $ posti $ P_1,...,P_k $ gli unici \psy ho che $ G \cong P_1\times...\times P_k $
+		\item 87→ Cosa puoi dire su $ n_p  $ se il \psy è normale? → Ho che $ P\lhd G\ \iff\ n_p = 1$
+		\item 88→ Enuncia la proposizione di caratterizzazione dei gruppi con ordine un prodotto di primi → $ G $ gruppo con $ o(G) = pq $, $p,q$ primi, $ p<q$ e $ p\nmid q-1\ \then\  G\cong C_p\times C_q (\cong C_{pq})$
+		\item 89→ 
+		\item 90→ 
+		\item 91→ 
+		\item 92→ 
+		\item 93→ 
+		\item 94→ 
+		\item 95→ 
+		\item 96→ 
+		\item 97→ 
+		\item 98→ 
+		\item 99→ 
+		\item 100→ 
+		
+	\end{itemize}
+	
+		
+	
+\end{document}
