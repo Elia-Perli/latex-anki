@@ -234,61 +234,93 @@
 		\item 120→ Per descrivere $ F(\alpha) $ bisogna per forza utilizzare le funzioni razionali? → No è sufficiente valutare i polinomi in quanto $ F(\alpha) = \operatorname{im} \varphi_\alpha = v_\alpha (F[X])$
 		\item 121→ Data un'estensione $E/F$, e $\alpha \in E$, allora $\alpha $ è algebrico se e solo se → $[F(\alpha):F]<\infty$ 
 		\item 122→ Qual è la definizione di estensione algebrica → è un'estensione in cui ogni elemento è algebrico
-		\item 123→ Come vengono caratterizzate le estensioni finit? → Le estensioni finite sono quelle algebriche e finitamente generate o equivalentemente quelle generate da un numero finito di elementi algebrici
+		\item 123→ Come vengono caratterizzate le estensioni finite? → Le estensioni finite sono quelle algebriche e finitamente generate o equivalentemente quelle generate da un numero finito di elementi algebrici
 		\item 124→ Qual è la definizione di campo algebricamente chiuso? → è un campo per cui ogni polinomio non costante su di esso ammette una radice
-		\item 125→ Qual è la definizione di chiusura algebrica di un campo $K$? → è un'estensione algebrica $L/K$ con $K$ algebricamente chiuso
+		\item 125→ Qual è la definizione di chiusura algebrica di un campo $K$? → è un'estensione algebrica $L/K$ con $L$ algebricamente chiuso
 		\item 126→ Enuncia il teorema di Steinitz→ Ogni campo ammette una chiusura algebrica
-		\item 127→ Enuncia il lemma sugli elementi algebrici di una chiusura algebrica → $K$ campo, $L/K$ estensione con $L$ algebricamente chiuso, allora $\bar L$
-		\item 128→ →
-		\item 129→ →
-		\item 130→ →
-		\item 131→ →
-		\item 132→ →
-		\item 133→ →
-		\item 134→ →
-		\item 135→ →
-		\item 136→ →
-		\item 137→ →
-		\item 138→ →
-		\item 139→ →
-		\item 140→ →
-		\item 141→ →
-		\item 142→ →
-		\item 143→ →
-		\item 144→ →
-		\item 145→ →
-		\item 146→ →
-		\item 147→ →
-		\item 148→ →
-		\item 149→ →
-		\item 150→ →
-		\item 151→ →
-		\item 152→ →
-		\item 153→ →
-		\item 154→ →
-		\item 155→ →
-		\item 156→ →
-		\item 157→ →
-		\item 158→ →
-		\item 159→ →
-		\item 160→ →
-		\item 161→ →
-		\item 162→ →
-		\item 163→ →
-		\item 164→ →
-		\item 165→ →
-		\item 166→ →
-		\item 167→ →
-		\item 168→ →
-		\item 169→ →
-		\item 170→ →
-		\item 171→ →
-		\item 172→ →
-		\item 173→ →
-		\item 174→ →
-		\item 175→ →
-		\item 176→ →
-		\item 177→ →
+		\item 127→ Enuncia il lemma sugli elementi algebrici di una chiusura algebrica → $K$ campo, $L/K$ estensione con $L$ algebricamente chiuso, allora $\overline{K}\strut^{L} = \{\alpha \in L: \alpha \text{ è algebrico su } K\}$ è un campo intermedio algebricamente chiuso, inoltre $ \overline{K}\strut^{L}/K $ è algebrica.
+		\item 128→ Dato un morfismo di campi $ \sigma: K\to L $, e un polinomio $ f=\sum a_ix^i $, cosa indica $ f^\sigma $?→ $ f^\sigma = \sum \sigma(a_i)x^i $ 
+		\item 129→ Dato $ \sigma:K\to L $ un morfismo di campi, presi $ K'=K(\alpha) $ un'estensione semplice algebrica, e $ f $ il polinomio minimo di $ \alpha $, allora: \begin{enumerate}
+			\item {{c1::se $ \sigma':K'\to L $ è un morfismo che estende $ \sigma $, allora $ \sigma'(\alpha) $ è una radice di $ f^\sigma $}}
+			\item {{c2::se $ \beta \in l$ è una radice di $ f^\sigma $, allora esiste uno ed un solo morfismo $ \sigma':K\to L $ che estende $ \sigma $ e tale che $ \sigma'(\alpha) = \beta $}}
+			\item {{c3::Le possibili estensioni di $ \sigma $ a $ K' $ sono al più $ \deg f = [K':K] $}}
+		\end{enumerate}→ clz
+		\item 130→ Enuncia il teorema sulla caratterizzazione delle estensioni algebricamente chiuse → Sia $ K'/K $ un'estensione algebrica e sia $ L $ un campo algebricamente chiuso. Sia $ \sigma:K\to L $ un morfismo. Allora esiste sempre un morfismo $ \sigma':K'\to L $ che estende $ \sigma $. Se $ K' $ è algebricamente chiuso e $ L/\sigma(K) $ è algebrica, allora ogni estensione è un isomorfismo $ K'\cong L $
+		\item 131→ Un'estensione algebrica di un campo \textbf{finito o numerabile}→ è ancora \textbf{numerabile}
+		\item 132→ Qual è la definizione di numeri algebrici e trascendenti? → I \textsc{numeri algebrici } sono gli elementi della chiusura algebrica di $ \Q $, cioè $ \overline{\Q}\strut^{\C} $. I \textsc{numeri trascendenti} sono gli elementi di $ \C\setminus \overline{\Q}\strut^{\C}  $
+		\item 133→ Data un'estensione $ E/F $ e due campi intermedi, $ K $ ed $ L $, qual è la definizione del campo composto?→ È il campo $ KL:= \bigcap\limits_{\substack{M\subset L\text{ sottocampo}\\ K\cup L\subset M }} M$. È il più piccolo sottocampo di $ E $ che contiene $ L $ e $ K $.
+		\item 134→ Cosa vuol dire che un polinomio $ f\in F[X] $ si \textsc{spezza} su un'estensione $ E/F $ ? → CHe è possibile scriverlo come prodotto di fattori lineari: \[ f(X) = c\cdot (X-\alpha_1)...(X-\alpha_n)\ \ \alpha_i \in E\]
+		\item 135→ Qual è la definizione di campo di spezzamento di un polinomio→ Un'estensione $ E/F $ è un \textsc{campo di spezzamento} di $ f $ su $ F $ se $ f $ si spezza su $ E $ e se $ f $ non si spezza su nessun campo intermedio.
+		\item 136→ Come si caratterizzano i campi di spezzamento? → $ E $ è di spezzamento di $ f $ se e solo se $ f $ si spezza su $ E $ ed $ E $ è generato dalle radici di $ f:\ E=F(\alpha_1,...,\alpha_n) $
+		\item 137→ Esiste sempre il campo di spezzamento di un polinomio non costante? → Sì, dato $ f\in F[X], \deg f=:d $, esiste $ E/F $ di spezzamento per $ f $, con $ [E:F]\leq d! $. Se $ f $ è irriducibile, allora $ d|[E:F] $
+		\item 138→ Cosa succede se ho due campi di spezzamento dello stesso polinomio $ f\in F[X] $→ Se ho due campi di spezzamento $ E/F, E'/F $, allora per ogni morfismo $ F $-lineare $ \eta:E\to \bar{E'} $ si ha $ \eta(E) = E' $. Da questo scende che il campo di spezzamento di un polinomio è unico a meno di isomorfismo
+		\item 139→ Qual è la definizione di estensione \textsc{normale}? → È un'estensione algebrica $ E/F $ per cui ogni polinomio irriducibile a coefficienti in $ F $ che ha una radice in $ E $ si spezza su $ E $.
+		\item 140→ Un'estensione algebrica $ E/F $ è normale sse per ogni $ \alpha \in E $ → il polinomio minimo $ m_{\alpha,F} $ si spezza su $ E $.
+		\item 141→ Enuncia il teorema di caratterizzazione delle estensioni finite normali → Data un'estensione $ E/F $ finita, le seguenti condizioni sono equivalenti: \begin{enumerate}
+			\item Ogni morfismo $ F $-lineare $ \eta:E\to \bar E $ ha immagine contenuta in $ E $
+			\item L'estensione $ E/F $ è normale
+			\item $ E/F $ è il campo di spezzamento di un polinomio $ f\in F[X] $.
+		\end{enumerate}
+		\item 142→ Se ho una catena di campi $ K\subset L\subset M $, come si comporta la normalità? → Se $ M/K $ è normale, allora anche $ M/L $ lo è
+		\item 143→ Qual è la definizione di polinomio \textsc{separabile}? → Un polinomio a coefficienti in un campo $ F $ è separabile se non ha radici multiple in nessuna estensione di $ F $
+		\item 144→ Qual è la definizione di \textsc{elemento separabile}? → Data un'estensione algebrica $ E/F $ e $ \alpha \in E $, diciamo che $ \alpha $ è un elemento separabile su $ F $ se $ m_{\alpha,F} $ è un polinomio separabile
+		\item 145→ Qual è la definizione di \textsc{estensione separabile}? → È un'estensione $ E/F $ in cui ogni elemento di $ E $ è separabile
+		\item 146→ Se $ f\in F[X] $ è irriducibile e non separabile, allora → $ f'\equiv 0 $
+		\item 147→ Qual è la definizione di \textsc{campo perfetto}?→ È un campo per cui le tutte le sue estensioni algebriche sono separabili
+		\item 148→ Cosa succede ai polinomi sui campi di caratteristica zero? → Se $ F $ è un campo, ogni polinomio irriducibile in $ F[X] $ è separabile, quindi ogni estensione algebrica di $ F $ è separabile. Dunque ogni campo di caratteristica zero è perfetto
+		\item 149→ Enuncia il teorema sui campi finiti \begin{enumerate}
+			\item {{c1::Un campo finito di caratteristica $ p $ ha ordine $ p^n $}}
+			\item {{c2::Per ogni $ n $ esiste un campo di ordine $ p^n $}}
+			\item {{c3::Ogni campo di ordine $ q= p^n $ è un campo di spezzamento del polinomio $ X^q-X $ sul campo primo}}
+			\item {{c4::Per il punto precedente, per ogni $ n $ esiste uno ed un solo campo di ordine $ p^n $ a meno di isomorfismo}}
+			\item {{c5::I campi finiti sono perfetti}}
+		\end{enumerate}→ clz
+		\item 150→ Enuncia il teorema dell'elemento primitivo → Un'estensione $ E/F $ finita e separabile è semplice, cioè esiste un elemento $ \alpha \in E $, l'elemento primitivo, tale che $ E=F(\alpha) $
+		\item 151→ $ L $ campo, $ f,g\in L[X] $, se $ f|g $ e $ g $ è separabile allora → anche $ f $ lo è
+		\item 152→ Data una catena di campi $ K\subset L\subset M $, se $ M/K $ è separabile, allora → anche $ M/L $ e $ L/K $ lo sono
+		\item 153→ Enuncia il teorema sui morfismi lineari su una chiusura algebrica.→ $ E/F $ estensione finita e separabile, $ \bar F $ una chiusura algebrica di $ F $. Allora esistono esattamente $ [E:F] $ morfismi $ F $-lineari da $ E $ a $ \bar F $
+		\item 154→ Qual è la definizione di \textsc{gruppo di Galois} di un'estensione $ E/F $? → È l'insieme $ \operatorname{Gal}(E/F) $ degli automorfismi di campo $ F $-lineari di $ E $, che è un gruppo rispetto alla composizione.
+		\item 155→ Qual è la definizione di estensione \textsc{di Galois}? → È un'estensione finita $ E/F $ normale e separabile
+		\item 156→ Se $ E/F $ è finita e normale, allora $ \operatorname{Gal}(E/F) $ coincide con → l'insieme dei morfismi $ F $-lineari $ E\to \bar E $
+		\item 157→ Se $ E/F $ è di Galois, allora $ |\operatorname{Gal}(E/F)| = $→ $ [E:F]  $
+		\item 158→ Qual è la definizione di gruppo di Galois di un polinomio $ f $?→	
+		È il gruppo di Galois del campo di spezzamento di $ f $
+		\item 159→ Se $ E=F(\alpha_1,...,\alpha_n) $ e $ d_i=\deg m_{\alpha_i} $, allora $ |\operatorname{Gal}(E/F)|\leq $→ $ d_1...d_n $ 
+		\item 160→ Come si comporta il gruppo di Galois rispetto all'insieme delle radici di un polinomio?→ Presi $ E/F $ estensione, $f \in  F[X] $ e posto $ R $ l'insieme delle radici di  $ f $ in $ E $ si ha che $ R $ è invariante per l'azione di $ \operatorname{Gal}(E/F) $. Cioè se $ \alpha \in R $ e $ \sigma \in \operatorname{Gal}(E/F) $ si ha $ \sigma(\alpha)\in R $. Possiamo quindi dire che $ \operatorname{Gal}(E/F)\acts R $
+		\item 161→ Preso $ f\in F[X] $ e posto $ E $ il campo di spezzamento di $ f $. Se l'insieme delle radici di $ f $ in $ E $ è $ R:= \{\alpha_1,...,\alpha_n\} $, allora: \begin{enumerate}
+			\item {{c1::l'azione di $ \operatorname{Gal}(E/F) $ è fedele}}
+			\item {{c2::se $ f $ è irriducibile, allora $ \operatorname{Gal}(E/F) $ agisce transitivamente sulle radici di $ f $}}
+		\end{enumerate} → clz
+		\item 162→ Se $ E=F(\alpha)/F $ è un'estensione semplice, allora \begin{enumerate}
+			\item l'azione di $ \operatorname{Gal}(E/F) $ sull'insieme $ R $ delle radici di $ m_{\alpha,F} $ è libera e transitiva
+			\item l'ordine del gruppo di Galois, $ |\operatorname{Gal}(E/F) |$ coincide con il numero delle radici di $ m_{\alpha,F} $ in $ E $
+		\end{enumerate} →
+		\item 163→ Qual è la definizione di \textsc{campo fissato}  da un sottogruppo di $ \operatorname{Gal}(E/F) $?→ è un $ E^G:=\{\alpha\in E:\gamma(\alpha) =\alpha \ \forall \gamma \in G\} $ con $ G\leq \operatorname{Gal}(E/F) $
+		\item 164→ Enuncia il lemma di Artin → Data un'estensione finita $ E/F $, allora per ogni sottogruppo $ G\leq \operatorname{Gal}(E/F) $ l'estensione $ E/E^G $ è di Galois, $ \operatorname{Gal}(E/E^G)=G $ e $ [E:E^G] = |G| $
+		\item 165→ Enuncia il teorema di caratterizzazione delle estensioni di Galois → Se $ E/F $ è un'estensione finita, allora le seguenti condizioni sono equivalenti: \begin{enumerate}
+			\item $ E/F $ è di Galois
+			\item $ |\operatorname{Gal}(E/F)|=[E:F] $
+			\item $ E^{\operatorname{Gal}(E/F)}=F $
+		\end{enumerate}
+		\item 166→ Se $ K\subset L\subset M $ sono estensioni finite e $ M/K $ è di Galois, allora → anche $ M/L $ è di Galois
+		\item 167→ Se $ E/F $ è di Galois, $ \alpha \in E $ e $ \operatorname{Gal}(E/F)\cdot \alpha = {\alpha_1 = \alpha,...,\alpha_r} $, allora $ m_{\alpha, F}(X)= $→ $ (X-\alpha_1)...(X-\alpha_r) $
+		\item 168→ Cos'è la \textsc{corrispondenza di galois}? → Posti $ \mathscr{K}:=\{\text{campi }K\text{ tali che } F\subset K\subset E\} $ e $ \mathscr{S}:= \{G\leq \operatorname{Gal}(E/F)\} $, è la coppia di funzioni \begin{align*}
+			\sigma:\mathscr{K}\to \mathscr{S}\ \ & \sigma(K) := \operatorname{Gal}(E/K)\\
+			\tau:\mathscr{S}\to \mathscr{K}\ \ & \tau(G):=E^G
+		\end{align*}
+		\item 169→ Cosa vale sempre per le composizioni $ \tau\sigma $ e $ \sigma\tau $ della corrispondenza di Galois? → \begin{enumerate}
+			\item Per ogni $ K\in \mathscr{K} $ si ha che $ K\subset \tau\sigma(K)=E^{\operatorname{Gal}(E/K)}$
+			\item Per ogni $ G\in \mathscr{S} $ si ha $ G=\sigma\tau(G)(=\operatorname{Gal}(E/E^G)) $
+		\end{enumerate}
+		\item 170→ Enuncia il teorema fondamentale della teoria di Galois, I parte→ Sia $ E/F $ un'estensione finita. Allora la corrispondenza di Galois è biunivoca (cioè $ \sigma $ e $ \tau $ sono una l'inversa dell'altra) se e solo se $ E/F $ è di Galois
+		\item 171→ Enuncia il teorema fondamentale della teoria di Galois, II parte→ Sia $ E/F $ un'estensione di Galois, e sia $ K\in \mathscr{K} $. Allora $ K/F $ è di Galois se e solo se $ \operatorname{Gal}(E/K)\lhd \operatorname{Gal}(E/F) $. In al caso \[\operatorname{Gal}(K/F)\cong \frac{\operatorname{Gal}(E/F)}{\operatorname{Gal}(E/K)}\]
+		\item 172→ Qual è la definizione di \textsc{estensione radicale}? → È un'estensione finita per cui esiste una catena \[F\subset F(\alpha_1)\subset F(\alpha_1,\alpha_2)\subset...\subset F(\alpha_1,....,\alpha_r)=E'\]
+		tale che per ogni $ i $ esiste $ 0<m_i\in \Z $ tale che $ \alpha_i^{m_i}\in F(\alpha_1,...,\alpha_{i-1}) $
+		\item 173→ Quando un'equazione polinomiale $ f(X)=0,\ f\in F[X] $ è risolubile per radicali? → Quando il campo di spezzamento di $ f(X) $ su $ F $ è contenuto in $ E' $, dove $ E'/F $ è un'estensione radicale.
+		\item 174→ Qual è la definizione di gruppo di Galois di un'equazione polinomiale $ f(X) = 0 $? →	È il gruppo di Galois di $ f $
+		\item 175→ In caratteristica 0 ogni  estensione radicale è contenuta in un'estensione →radicale e di Galois
+		\item 176→ In caratteristica 0 un'estensione di Galois, $ E/F $, è contenuta in un'estensione radicale e di Galois se e solo se → $ \operatorname{Gal}(E/F) $ è un gruppo risolubile
+		\item 177→ Enuncia il teorema di Galois→ Siano $ F $ un campo di caratteristica 0, $ f\in F[X] $. Allora l'equazione $ f(X)=0 $ si può risolvere per radicali se e solo se il suo gruppo di Galois è un gruppo risolubile.
 		\item 178→ →
 		\item 179→ →
 		\item 180→ →
