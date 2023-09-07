@@ -200,17 +200,27 @@
 		\item 86→ Enuncia il teorema di caratterizzazione dei gruppi con \psy unici → $ G  $ gruppo finito, $ o(G)= p_1^{\alpha_1}...p_k^{\alpha_k},$  $\ p_i $ primi, se tutti i \psy sono unici $ \then\ $ posti $ P_1,...,P_k $ gli unici \psy ho che $ G \cong P_1\times...\times P_k $
 		\item 87→ Cosa puoi dire su $ n_p  $ se il \psy è normale? → Ho che $ P\lhd G\ \iff\ n_p = 1$
 		\item 88→ Enuncia la proposizione di caratterizzazione dei gruppi con ordine un prodotto di primi → $ G $ gruppo con $ o(G) = pq $, $p,q$ primi, $ p<q$ e $ p\nmid q-1\ \then\  G\cong C_p\times C_q (\cong C_{pq})$
-		\item 89→ 
-		\item 90→ 
-		\item 91→ 
-		\item 92→ 
-		\item 93→ 
-		\item 94→ 
-		\item 95→ 
-		\item 96→ 
-		\item 97→ 
-		\item 98→ 
-		\item 99→ 
+		\item 89→ Illustra la ostruzione del prodotto semidiretto interno di gruppi → Dati un gruppo $ G $, $ N\lhd H $ ed un sottogruppo $ H $ di $ G $, tali che $ G=NH,\ N\cap H =\{e\}$ ho che $ f:N\times H\to G $ è biunivoca. Se $ h\in H $ allora $ \operatorname{inn}_h $ è un automorfismo che preserva $ N $, dunque è anche un automorfismo di $ N $, che indico con $ \varepsilon_h :N\to N,\ \varepsilon_h(n)=hnh^{-1}$. Otengo dunque che $ f(n_1,h_1)\cdot f(n_2,h_2) = f(n_1\varepsilon_{h_1}(n_2), h_1h_2)$. Questo significa che dato un il morfismo $ \epsilon $ è possibile calcolare il prodotto di $ G $ e ricostruire questo gruppo a partire da $ N $ ed $ H $. (very bad flashcard)
+		\item 90→ Enuncia il teorema sul prodotto semidiretto esterno → Dati $ N $ ed $ H $ gruppi e $ \theta:H\to \operatorname{Aut}N:h\to \theta_h $ un morfismo. Definiamo su $ N\times H $ il prodotto $ \bullet_\theta $ mediante la formula \[(n_1,h_1)\bullet_\theta (n_2,h_2):=(n_1\theta_{h_1}(n_2),h_1h_2)\]. Vale quindi che \begin{enumerate}
+			\item $ G:=(N\times H,\bullet_\theta) $ è un gruppo, indicato con $ N\rtimes_\theta H $, chiamato \textsc{prodotto semidiretto} di $ N $ ed $ H $
+			\item Le mappe \[\alpha:N\to G,\ \alpha(n)=(n,e),\ \ \ \beta:H\to G,\ \beta(h)=(e,h)\] sono morfismi iniettivi di gruppi.
+			\item $ \bar N:= \alpha(N)=N\times \{e\} $ è un sottogruppo normale di $ G $, mentre $ \bar H:=\{e\}\times H $ è un sottogruppo di $ G $
+			\item $ G = \bar N\bar H $. Infine il morfismo $ \varepsilon  $ coincide con $\theta $ a meno di $ \alpha  $ e $ \beta $, ossia se $ n\in N $ e $ h\in H $, $ \bar n:= \alpha(n) $, $ \bar h:= \beta(h) $ allora \[\varepsilon_{\bar h}(\bar n)=\bar h\bullet_\theta \bar n \bullet_\theta h^{-1} = \alpha \circ \theta_h(n)\] (very very bad flashcard)
+		\end{enumerate}
+		\item 91→ Enuncia la proposizione  sul rapporto tra il prodotto interno ed il prodotto semidiretto di gruppi → Dato un gruppo $ G $, $ H\leq G$, $ N\lhd G$, definito $ \epsilon:H\to \operatorname{Aut}:h\mapsto (\epsilon_h:N\to N:n\mapsto \epsilon_h(n)=hnh^{-1}) $, se $ G = NH $ e $ H\cap N=\{e\} $ allora $ G\cong N\rtimes_\epsilon H $
+		\item 92→ Se in un prodotto semidiretto ho due morfismi coniugati cosa succede? → Dati $ N $ ed $ H $ gruppi, $ \theta,\ \theta':H\to \operatorname{Aut} N $ morfismi. Se esiste $ \alpha \in \operatorname{Aut} N $ tale che \[\theta_h' = \alpha\circ \theta_h\circ \alpha^{-1}\] allora l'applicazione \[ F:N\rtimes_\theta \to N\rtimes_{\theta'}H,\ F(n,h):= (\alpha(n),h) \] è un isomorfismo $ N\rtimes_\theta H \cong N\rtimes_{\theta'} H$
+		\item 93→ Qual è la definizione di sottogruppo caratteristico? → È un sottogruppo tale che per ogni $ \alpha \in \operatorname{Aut}G $ vale $ \alpha(H) = H $
+		\item 94→ Esibisci due sottogruppi caratteristici sempre presenti in un gruppo → Il centro $ Z(G) $ ed il sottogruppo dei commutatori, $ [G,G] $
+		\item 95→ Un \psy di $ G $ è normale se e solo se {{c1::è unico }} se e solo se {{c1::è caratteristico}} → clz
+		\item 96→ Enuncia la proposizione che caratterizza i quozienti abeliani → Dato $ G $ gruppo, il sottogruppo dei commutatori $ [G,G] $ è caratteristico. Inoltre se $ N\lhd G $ allora $ G/N $ è abeliano se e solo se $ [G,G]\subset N $
+		\item 97→ Qual è la definizione di \textsc{catena normale} in un gruppo $ G $? Cosa sono i fattori della catena? → È una successione di sottogruppi \[G=G_0 \supset G_1\supset ...\supset G_i\supset G_{i+1}\supset ...\] tale che $ g_{i+1}\lhd G_i$ per ogni $ i $ e $ G_n=\{1\} $ per qualche $ n $. I fattori della catena sono $ G_i/G_{i+1} $
+		\item 98→ Qual è la definizione di catena dei derivati? → È la catena $ D^0G:=G,\ D^{i+1}G:=[D^iG,D^iG] $, tale che $ G=D^0G\supset D^1 G\supset...\supset D^i G\supset D^{i+1}G\supset ... $
+		\item 99→ Un gruppo abeliano finito è semplice se e solo se → è ciclico di ordine finito
+        \item 99.1→ Un gruppo $ G $ è risolubile se e solo se → esiste un numero $ n $ tale che $ D^nG = \{e\}$
+		\item 99.2→ Dato un gruppo finito $ G $, allora sono equivalenti le condizioni: \begin{enumerate}
+			\item {{c1::G è risolubile}}
+			\item {{c2::Esiste una catena normale con fattori ciclici di ordine primo}}
+		\end{enumerate}
 		\item 100→ Cos'è la caratteristica di un anello? → Preso un anello $ A $ esiste sempre un morfismo $ \phi:\Z \to A: n\mapsto \phi(n) = n\cdot 1_A $. Essendo $ \Z $ un PID, il nucleo di $ \phi $ sarà principale, cioè esiste un $ n $ t.c. $ \ker\phi= (n) $. Questo $ n $ è la \textsc{caratteristica} dell'anello $ A $.
 		\item 101→ Come si comporta il prodotto in un campo di caratteristica $ n $ ? → preso $ m\in \Z $ e $ x\in K^* $, $ m\cdot x  = 0$ sse $ n|m $ con $ n = \operatorname{car}K$ 
 		\item 102→ Qual è la definizione di campo primo? → È il campo generato dall'immagine di $ \phi:n\mapsto n\cdot 1_A $
@@ -321,29 +331,26 @@
 		\item 175→ In caratteristica 0 ogni  estensione radicale è contenuta in un'estensione →radicale e di Galois
 		\item 176→ In caratteristica 0 un'estensione di Galois, $ E/F $, è contenuta in un'estensione radicale e di Galois se e solo se → $ \operatorname{Gal}(E/F) $ è un gruppo risolubile
 		\item 177→ Enuncia il teorema di Galois→ Siano $ F $ un campo di caratteristica 0, $ f\in F[X] $. Allora l'equazione $ f(X)=0 $ si può risolvere per radicali se e solo se il suo gruppo di Galois è un gruppo risolubile.
-		\item 178→ →
-		\item 179→ →
-		\item 180→ →
-		\item 181→ →
-		\item 182→ →
-		\item 183→ →
-		\item 184→ →
-		\item 185→ →
-		\item 186→ →
-		\item 187→ →
-		\item 188→ →
-		\item 189→ →
-		\item 190→ →
-		\item 191→ → 
-		\item 192 → 
-		\item 193 → 
-		\item 194→ 
-		\item 195→ 
-		\item 196→ 
-		\item 197→
-		\item 198→ 
-		\item 199→ 
-		\item 200→
+		\item 178→ Data una catena di campi $ K\subset L\subset M $ una catena di campi, se $ M/L $ e $ L/K $ sono radicali, allora → anche $ M/K $ lo è.
+		\item 179→ Se $ K'/K $ è radicale e $ v $ è un elemento di una delle estensioni che portano a $ K' $, allora → anche $ K'(v)/K(v) $ è radicale
+		\item 180→ Se $ K'/K $ è radicale, $ v_1,...,v_n $ sono elementi di un'estensione di $ K' $, allora → anche l'estensione $ K'(v_1,...,v_n)/K(v_1,...,v_n) $ è radicale
+		\item 181→ Siano $ E/F $ un'estensione, $ K,L $ campi intermedi e$ KL $ il campo composto. Se le estensioni $ K/F $ e $ L/F $ sono radicali, → anche $ KL/F $ lo è
+		\item 182→ Com'è l'estensione $ F(\mu_n)/F $ con $ \mu_n $ insieme delle radici di $ X^n-1 $?→ $ F(\mu_n)/F $ è di Galois e $ \operatorname{Gal}(F(\mu_n)/F) $ è un gruppo abeliano
+		\item 183→ Enuncia il lemma sulle estensioni dei campi di caratteristica nulla che contengono $ n $ radici $ n $-esime dell'unità. → Siano $ n\in \Z^{>0} $, $ K $ un campo di caratteristica nulla che contiene $ n $ radici $ n $-esime dell'unità, $ K'/K $ un'estensione finita. Supposto che $ K' = K(v) $ con $ v\in K'\setminus K  $ e che $ v^n\in K $, allora: \begin{enumerate}
+			\item $ K'/K $ è di Galois
+			\item $ \operatorname{Gal}(K'/K) $ è ciclico
+		\end{enumerate}
+		\item 184→ Come si comporta la risolubilità rispetto alle operazioni sui gruppi?→ I sottogruppi di gruppi risolubili sono risolubili e le immagini di gruppi risolubili mediante morfismi di gruppi sono risolubili
+		\item 185→ Enuncia il lemma sui generatori di $ S_n $→ Le permutazioni $ (12)  $ e $ (12...n) $ generano $ S_n $. Inoltre se $ p  $ è primo, un $ p $-ciclo qualsiasi ed una trasposizione qualsiasi generano $ S_p $
+		\item 186→ Enuncia il lemma sui sottogruppi transitivi di $ S_p $ con $ p $ primo → Preso un sottogruppo transitivo $ G\leq S_p $, cioè che agisce transitivamente su $ \{1,...,p\} $, $ G $ contiene un $ p $-ciclo
+		\item 187→ Enuncia il teorema della condizione sufficiente per la non solubilità per radicali → preso $ f\in \Q[X] $ un polinomio irriducibile di grado $ p\geq 5$, $ p $ primo. Se f ha esattamente $ p-2 $ radici reali allora $ \operatorname{Gal}(f)=S_p$ ed $ f $ non è risolubile per radicali
+		\item 188→ Enuncia il teorema sulle estensioni di campi finiti → Sia $ p $ un primo e siano $ n,m $ naturali. Allora \begin{enumerate}
+			\item  Se $ E/F $ è un'estensione con $ |F|=p^n $ e $ |E|=p^m $, allora $ n|m $
+			\item Se $ n|m $, allora esiste un'estensione $ \mathbb{F}_{p^m}/\mathbb{F}_{p^n} $, unica a meno di isomorfismo.
+		\end{enumerate}
+		\item 189→ Ogni estensione di campi finiti è → di Galois
+		\item 190→ Se $ E/F $ è un'estensione con $ |E|=p^m $ e $ |F|=p^n $, $ p $ primo, e $ m=nr $, allora $ \operatorname{Gal}(E/F) $ → è un gruppo ciclico di ordine $ r $ generato da $ \phi^n $ dove $ \phi  $ è il morfismo di Frobenius
+		
 		
 	\end{itemize}
 	
