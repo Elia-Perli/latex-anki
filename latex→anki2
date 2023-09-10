@@ -1,0 +1,4 @@
+#!/bin/bash
+
+VAR=pwd
+python "/home/ape/Scrivania/Programming/Python/latex_anki/latex→anki/parser_latex→anki.py" $1 $VAR

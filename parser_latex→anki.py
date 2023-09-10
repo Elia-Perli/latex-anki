@@ -11,10 +11,15 @@ from functools import reduce
 
 # CALL SCRIPT: /home/ape/Scrivania/Programming/Python/latex_anki/latex→anki/parser_latex→anki.py
 # os.path.join(sys.argv[2],sys.argv[1])
-read_PATH = os.path.join(sys.argv[2],sys.argv[1])
-write_PATH = os.path.join(sys.argv[2],sys.argv[1].replace(".tex","_to_be_imported.txt"))
- 
-# This script takes a tex file with a certain format and produces a .txt file to be imported in anki
+read_PATH = os.path.join(os.getcwd(),sys.argv[1])
+write_PATH = os.path.join(os.getcwd(),sys.argv[1].replace(".tex","_to_be_imported.txt"))
+
+# print(sys.argv[0])
+# print(sys.argv[1])
+
+# print(read_PATH)
+# print(write_PATH)
+## This script takes a tex file with a certain format and produces a .txt file to be imported in anki
 
 
 fh = open(read_PATH, mode="r", encoding="utf-8")
@@ -70,7 +75,7 @@ for elem in B:
             wr.write(line)
     except IndexError:
         print(elem)
-        print("→ You might have forgot a \"→\"")
+        print("→ You might have forgotten a \"→\"")
         pass
 
 
