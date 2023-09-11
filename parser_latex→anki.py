@@ -8,6 +8,11 @@ import os
 import re
 from functools import reduce
 
+#TODO: if you use 8 spaces instead of \t\t you get some serious problems. 
+# This should be fixed somehow.
+
+
+
 
 # CALL SCRIPT: /home/ape/Scrivania/Programming/Python/latex_anki/latex→anki/parser_latex→anki.py
 # os.path.join(sys.argv[2],sys.argv[1])
